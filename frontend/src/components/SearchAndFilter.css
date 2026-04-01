@@ -1,0 +1,47 @@
+/* ================= DARK THEME (IMPROVED) ================= */
+
+.search-container {
+  padding: 14px;                 /* increased padding */
+  border-radius: 14px;      /* subtle container border */
+}
+
+/* Inputs */
+.search-input,
+.filter-select {
+  background: #1e1e1e;
+  color: #ffffff;
+  border: 2px solid #3a3a3a;      /* stronger visible border */
+  padding: 10px 14px;             /* better internal spacing */
+  border-radius: 10px;
+  box-shadow: none;               /* remove heavy shadow */
+  transition: all 0.2s ease-in-out;
+}
+
+/* Placeholder */
+.search-input::placeholder {
+  color: #9ca3af;
+}
+
+/* Hover */
+.search-input:hover,
+.filter-select:hover {
+  background: #262626;
+  border-color: #4b4b4b;
+}
+
+/* Focus */
+.search-input:focus,
+.filter-select:focus {
+  background: #1e1e1e;
+  border: 1px solid #3b82f6;      /* blue focus */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+  outline: none;
+  color: white;
+}
+
+/* Dropdown options */
+.filter-select option {
+  background: #1e1e1e;
+  color: #ffffff;
+}
+

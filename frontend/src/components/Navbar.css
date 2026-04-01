@@ -1,0 +1,149 @@
+.smart-navbar{
+background:#0f172a;
+border-bottom:1px solid rgba(255,255,255,0.08);
+position:sticky;
+top:0;
+z-index:999;
+}
+
+body[data-theme="light"] .smart-navbar{
+background:white;
+border-bottom:1px solid #e5e7eb;
+}
+
+.smart-logo{
+font-size:22px;
+font-weight:800;
+color:white !important;
+}
+
+body[data-theme="light"] .smart-logo{
+color:#111 !important;
+}
+
+.smart-link{
+color:rgba(255,255,255,0.8) !important;
+font-weight:600;
+}
+
+.smart-link:hover{
+color:#3b82f6 !important;
+}
+
+body[data-theme="light"] .smart-link{
+color:#333 !important;
+}
+
+/* Avatar */
+
+.avatar-circle{
+width:36px;
+height:36px;
+background:#3b82f6;
+color:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:700;
+font-size:15px;
+}
+
+.user-avatar-wrapper{
+display:flex;
+align-items:center;
+}
+
+/* Logout */
+
+.logout-link{
+cursor:pointer;
+font-weight:600;
+}
+
+.logout-link:hover{
+color:#ef4444 !important;
+}
+
+/* Theme icon */
+
+.theme-icon{
+font-size:30px;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content: center;
+}
+
+
+/* Dropdown */
+
+.dropdown-menu{
+background:#0f172a;
+border:1px solid rgba(255,255,255,0.08);
+border-radius:10px;
+}
+
+.dropdown-item{
+color:white;
+}
+
+.dropdown-item:hover{
+background:#1e293b;
+color:#3b82f6;
+}
+
+body[data-theme="light"] .dropdown-menu{
+background:white;
+border:1px solid #ddd;
+}
+
+body[data-theme="light"] .dropdown-item{
+color:#111;
+}
+
+body[data-theme="light"] .dropdown-item:hover{
+background:#f1f5f9;
+}
+
+/* Hamburger */
+
+.navbar-toggler{
+border:none;
+}
+
+.navbar-toggler-icon{
+filter:invert(1);
+}
+
+body[data-theme="light"] .navbar-toggler-icon{
+filter:invert(0);
+}
+
+/* Mobile */
+
+@media(max-width:650px){
+
+.navbar-collapse{
+background:#0f172a;
+padding:15px;
+border-radius:10px;
+margin-top:10px;
+}
+
+body[data-theme="light"] .navbar-collapse{
+background:white;
+}
+
+.navbar-nav{
+flex-direction:column;
+align-items:flex-start;
+gap:10px;
+}
+
+.dropdown-menu{
+position:relative !important;
+width:100%;
+}
+
+}

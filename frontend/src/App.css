@@ -1,0 +1,177 @@
+/* ===============================
+   SmartStudy Premium UI Theme
+   Dark + Light + Blue Accent
+================================ */
+
+/* Theme Variables */
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+
+  --radius: 18px;
+  --transition: 0.3s ease;
+}
+
+
+/* Default Dark Theme */
+body[data-theme="dark"] {
+  --bg: #0f172a;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --border: rgba(255, 255, 255, 0.12);
+}
+
+/* Light Theme */
+body[data-theme="light"] {
+  --bg: #f8fafc;
+  --card-bg: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: rgba(0, 0, 0, 0.1);
+}
+
+/* Body Global */
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Poppins", sans-serif;
+  transition: var(--transition);
+  min-height: 100vh;
+}
+
+/* Main Container */
+.app-container {
+  padding: 30px 15px;
+}
+
+/* Navbar */
+.smart-navbar {
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+  padding: 15px 0;
+}
+
+.smart-logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text) !important;
+  text-decoration: none;
+}
+
+.smart-link {
+  color: var(--muted) !important;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.smart-link:hover {
+  color: var(--primary) !important;
+}
+
+/* Buttons */
+.smart-btn {
+  background: var(--primary);
+  color: white !important;
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  transition: var(--transition);
+}
+
+.smart-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.smart-btn-outline {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary) !important;
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.smart-btn-outline:hover {
+  background: var(--primary);
+  color: white !important;
+}
+
+/* Logout Button */
+.smart-btn-danger {
+  background: #dc2626;
+  color: white;
+  padding: 9px 16px;
+  border-radius: var(--radius);
+  border: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.smart-btn-danger:hover {
+  background: #b91c1c;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.theme-toggle:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Premium Card */
+.smart-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  transition: var(--transition);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.smart-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+}
+
+/* Titles */
+.smart-title {
+  font-size: 2.3rem;
+  font-weight: 800;
+}
+
+.smart-subtitle {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* ===============================
+   Sticky Footer Layout Fix
+================================ */
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main Content Expand */
+.app-container {
+  flex: 1;
+}

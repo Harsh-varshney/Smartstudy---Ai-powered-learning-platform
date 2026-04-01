@@ -1,0 +1,161 @@
+/* =============================== */
+/* 🎥 VIDEO PAGE PREMIUM UI */
+/* =============================== */
+
+.video-section {
+  margin-top: 50px;
+  padding: 20px;
+}
+
+/* Title */
+.video-title {
+  font-size: 32px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 45px;
+  color: #3b82f6;
+}
+
+/* Grid Layout */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* =============================== */
+/* 📌 Video Card */
+/* =============================== */
+
+.video-card {
+  padding: 28px;
+  border-radius: 22px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  box-shadow: 0px 10px 28px rgba(0, 0, 0, 0.45);
+  transition: all 0.35s ease;
+
+  text-align: center;
+}
+
+/* Hover Animation */
+.video-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border: 1px solid rgba(59, 130, 246, 0.55);
+
+  box-shadow: 0px 15px 35px rgba(59, 130, 246, 0.25);
+}
+
+/* Topic Name */
+.video-topic {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: white;
+}
+
+/* Text */
+.video-text {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Button */
+.video-btn {
+  padding: 12px;
+  border-radius: 50px;
+
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.video-btn:hover {
+  transform: scale(1.04);
+  opacity: 0.95;
+}
+
+/* =============================== */
+/* ☀️ LIGHT MODE SUPPORT */
+/* =============================== */
+
+body[data-theme="light"] .video-card {
+  background: white;
+  color: #111;
+
+  border: 2px solid #868991;
+  box-shadow: 0px 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+body[data-theme="light"] .video-topic {
+  color: #111;
+}
+
+body[data-theme="light"] .video-text {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+body[data-theme="light"] .video-title {
+  color: #2563eb;
+}
+
+/* Container (optional but recommended) */
+.search-wrapper {
+  display: flex;
+  justify-content: center;  
+  margin-bottom: 20px;
+}
+
+/* Search Input */
+.custom-search {
+  width: 100%;                /* thoda chhota */
+  max-width: 600px; 
+  background-color: #1f1f1f;      /* dark gray */
+  color: #ffffff;
+  border: 2px solid #3a3a3a;      /* visible border like image */
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 16px;
+  /* transition: all 0.3s ease; */
+}
+
+/* Placeholder */
+.custom-search::placeholder {
+  color: #9ca3af;
+}
+
+/* Focus Effect */
+.custom-search:focus {
+  background-color: #232323;
+  border-color: #4f46e5;          /* nice blue focus */
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+  outline: none;
+  color: white;
+}
+
+/* LIGHT MODE */
+body[data-theme="light"] .custom-search {
+  background-color: #ffffff;   /* pure white */
+  color: #111;
+  border: 2px solid #83878f;
+}
+
+body[data-theme="light"] .custom-search::placeholder {
+  color: #6b7280;
+}
+
+/* Remove dark shadow in light mode */
+body[data-theme="light"] .custom-search:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}

@@ -1,0 +1,121 @@
+/* =============================== */
+/* 📌 PYQ Papers Page */
+/* =============================== */
+
+.pyq-papers-section {
+  margin-top: 50px;
+  padding: 20px;
+}
+
+/* Title */
+.pyq-papers-title {
+  font-size: 32px;
+  font-weight: 900;
+  color: #3b82f6;
+}
+
+/* =============================== */
+/* Dismissible Alert */
+/* =============================== */
+.pyq-alert {
+  position: relative;
+  background: rgba(255, 255, 0, 0.15);
+  color: white;
+  padding: 12px 20px;
+  margin-bottom: 25px;
+  border-radius: 15px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+.pyq-alert-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* Grid Layout */
+.pyq-papers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+/* =============================== */
+/* Paper Card */
+.pyq-paper-card {
+  padding: 28px;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0px 10px 28px rgba(0, 0, 0, 0.45);
+  text-align: center;
+  transition: all 0.35s ease;
+}
+
+/* Hover Effect */
+.pyq-paper-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border: 1px solid rgba(59, 130, 246, 0.55);
+  box-shadow: 0px 15px 35px rgba(59, 130, 246, 0.25);
+}
+
+/* Paper Year Text */
+.pyq-paper-year {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* Button */
+.pyq-paper-btn {
+  padding: 12px 25px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pyq-paper-btn:hover {
+  transform: scale(1.04);
+  opacity: 0.95;
+}
+
+/* =============================== */
+/* ☀️ LIGHT MODE SUPPORT */
+body[data-theme="light"] .pyq-paper-card {
+  background: white;
+  border: 2px solid #e5e7eb;
+  box-shadow: 0px 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+body[data-theme="light"] .pyq-paper-year {
+  color: #111;
+}
+
+body[data-theme="light"] .pyq-paper-btn {
+  background: linear-gradient(135deg, #3b82f6, #1e40af);
+  color: white;
+}
+
+body[data-theme="light"] .pyq-papers-title {
+  color: #2563eb;
+}
+
+body[data-theme="light"] .pyq-alert {
+  background: rgba(255, 255, 0, 0.12);
+  color: #7a3e00;
+}

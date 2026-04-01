@@ -1,0 +1,68 @@
+/* Footer Base */
+.footer {
+  background-color: rgba(15, 23, 42, 0.85);
+  color: #fff;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+/* Footer Text */
+.footer-text {
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Social Icons */
+.social-link {
+  color: inherit;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-link:hover {
+  transform: scale(1.2);
+  opacity: 0.85;
+}
+
+/* Contact Row (Phone Left - Email Right) */
+.footer-contact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+.footer-contact-row i {
+  margin-right: 6px;
+}
+
+/* Dark Mode */
+body[data-theme="dark"] .footer {
+  background: rgba(15, 23, 42, 0.85);
+  color: #fff;
+}
+
+/* Light Mode */
+body[data-theme="light"] .footer {
+  background: #f9f9f9;
+  color: #111;
+  border-top: 1px solid #ddd;
+}
+
+body[data-theme="light"] .social-link {
+  color: #111;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+  .footer-contact-row {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+
+}

@@ -1,0 +1,211 @@
+/* ============================ */
+/* 🔥 SmartStudy Todo */
+/* ============================ */
+
+.todo-wrapper {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+}
+
+/* ============================ */
+/* Glass Card */
+/* ============================ */
+
+.todo-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(18px);
+
+  box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.5);
+  transition: 0.35s ease;
+}
+
+.todo-card:hover {
+  transform: translateY(-8px);
+}
+
+/* ============================ */
+/* Title */
+/* ============================ */
+
+.todo-title {
+  font-weight: 900;
+  font-size: 28px;
+  text-align: center;
+  color: #3b82f6;
+  margin-bottom: 8px;
+}
+
+.todo-subtitle {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.75;
+  margin-bottom: 30px;
+}
+
+/* ============================ */
+/* Input */
+/* ============================ */
+
+.todo-input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 14px 16px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 600;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(15, 23, 42, 0.55);
+  color: #ffffff;
+
+  transition: 0.25s ease;
+}
+
+.todo-input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.todo-input:focus {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid #3b82f6;
+  box-shadow: 0px 0px 10px rgba(59, 130, 246, 0.65);
+  outline: none;
+}
+
+/* Button Same as Auth */
+.todo-btn {
+  padding: 14px 22px;
+  border-radius: 50px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+
+  transition: 0.3s ease;
+}
+
+.todo-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+/* ============================ */
+/* Task Item */
+/* ============================ */
+
+.todo-item {
+  background: rgba(15, 23, 42, 0.55);
+  padding: 16px;
+  border-radius: 16px;
+  margin-bottom: 15px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: 0.25s ease;
+}
+
+.todo-item:hover {
+  background: rgba(15, 23, 42, 0.75);
+}
+
+.todo-text {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.completed .todo-text {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Action Buttons */
+.todo-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.complete-btn {
+  background: transparent;
+  border: 1px solid #22c55e;
+  color: #22c55e;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.complete-btn:hover {
+  background: #127837;
+  color: white;
+}
+
+.delete-btn {
+  background: transparent;
+  border: 1px solid #ef4444;
+  color: #ef4444;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #ef4444;
+  color: white;
+}
+
+/* ============================ */
+/* ☀ Light Theme Support */
+/* ============================ */
+
+body[data-theme="light"] .todo-card {
+  background: white;
+  color: #111;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.18);
+  border: 2px solid #d2c9c9;
+}
+
+body[data-theme="light"] .todo-input {
+  background: #f1f5f9;
+  color: #111;
+  border: 1px solid #cbd5e1;
+}
+
+body[data-theme="light"] .todo-input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+body[data-theme="light"] .todo-input:focus {
+  background: #ffffff;
+  border: 1px solid #2563eb;
+  box-shadow: 0px 0px 8px rgba(37, 99, 235, 0.3);
+}
+
+body[data-theme="light"] .todo-title {
+  color: #2563eb;
+}
+
+body[data-theme="light"] .todo-item {
+  background: #f1f5f9;
+}
+
+body[data-theme="light"] .todo-item:hover {
+  background: #e2e8f0;
+}

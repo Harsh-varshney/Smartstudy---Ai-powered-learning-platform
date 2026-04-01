@@ -1,0 +1,136 @@
+/* ================================ */
+/* 📄 SmartStudy AI Paper Analyzer */
+/* Premium Glass UI */
+/* ================================ */
+
+.paper-container{
+  max-width: 900px;
+  margin: auto;
+  padding: 10px;
+}
+
+/* Title */
+
+.paper-title{
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 30px;
+  font-size: 26px;
+  color: var(--text-color);
+}
+
+/* ================= Upload Card ================= */
+
+.paper-upload{
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 35px;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 35px;
+  transition: all 0.3s ease;
+}
+
+.paper-upload:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Upload Text */
+
+.paper-upload p{
+  margin-bottom: 12px;
+  opacity: 0.8;
+}
+
+/* File Input */
+
+.paper-upload input{
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 2px dashed rgba(255,255,255,0.2);
+  background: transparent;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+/* Button */
+
+.paper-upload button{
+  padding: 12px 28px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
+
+  background: linear-gradient(135deg,#3b82f6,#2563eb);
+  color: white;
+
+  transition: all 0.25s ease;
+}
+
+.paper-upload button:hover{
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(37,99,235,0.4);
+}
+
+/* ================= Result Card ================= */
+
+.paper-result{
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 30px;
+  border: 1px solid rgba(255,255,255,0.08);
+
+  animation: fadeIn 0.4s ease;
+}
+
+/* Result Title */
+
+.paper-result h4{
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* Result Text */
+
+.paper-result pre{
+  white-space: pre-wrap;
+  line-height: 1.7;
+  font-family: inherit;
+  font-size: 15px;
+  color: var(--text-color);
+}
+
+/* Animation */
+
+@keyframes fadeIn{
+
+  from{
+    opacity:0;
+    transform: translateY(10px);
+  }
+
+  to{
+    opacity:1;
+    transform: translateY(0);
+  }
+
+}
+
+/* ================= Mobile ================= */
+
+@media(max-width:768px){
+
+  .paper-upload{
+    padding:25px;
+  }
+
+  .paper-result{
+    padding:22px;
+  }
+
+}

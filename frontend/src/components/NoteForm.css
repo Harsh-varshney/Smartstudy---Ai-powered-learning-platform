@@ -1,0 +1,107 @@
+/* =============================== */
+/* 📌 NOTE FORM CARD */
+/* =============================== */
+
+.note-form-card {
+  border-radius: 12px;
+  padding: 25px;
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title */
+.note-form-title {
+  font-weight: 800;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+.note-input {
+  border-radius: 12px;
+  padding: 12px 15px;
+  font-size: 15px;
+  transition: all 0.3s;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.note-input::placeholder{
+    color: white !important;
+    opacity: 0.6 !important;
+}
+
+.note-input:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(59,130,246,0.3);
+  border-color: #3b82f6;
+  background: rgba(255,255,255,0.15);
+}
+
+/* Submit Button */
+.note-submit-btn {
+  padding: 12px;
+  font-weight: 700;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* =============================== */
+/* DARK MODE */
+/* =============================== */
+
+body[data-theme="dark"] .note-form-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: white;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+
+body[data-theme="dark"] .note-form-title {
+  color: #3b82f6;
+}
+
+body[data-theme="dark"] .note-input {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+body[data-theme="dark"] .note-submit-btn {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+}
+
+/* =============================== */
+/* LIGHT MODE */
+/* =============================== */
+
+body[data-theme="light"] .note-form-card {
+  background: #fff;
+  border: 2px solid rgba(187, 180, 180, 0.54) !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  color: #111;
+}
+
+body[data-theme="light"] .note-form-title {
+  color: #2563eb;
+}
+
+body[data-theme="light"] .note-input {
+  background: #f9f9f9;
+  color: #111;
+  border: 2px solid #ddd;
+}
+
+body[data-theme="light"] .note-input::placeholder {
+  color: #111 !important;
+  opacity: 0.6 !important;
+}
+
+
+body[data-theme="light"] .note-submit-btn {
+  background: linear-gradient(135deg, #3b82f6, #1e40af);
+  color: white;
+}

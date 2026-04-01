@@ -1,0 +1,16 @@
+
+/* Title */
+.notes-title {
+  font-size: 34px;
+  font-weight: 900;
+  color: #3b82f6;
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+
+
+body[data-theme="light"] .notes-title {
+  color: #2563eb;
+}
+

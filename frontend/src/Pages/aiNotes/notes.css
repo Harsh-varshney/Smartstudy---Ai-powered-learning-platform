@@ -1,0 +1,350 @@
+/* ================================= */
+/* SMARTSTUDY AI NOTES PAGE */
+/* ================================= */
+
+.notes-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding:40px 15px;
+
+    background:var(--bg-color);
+    color:var(--text-color);
+}
+
+
+/* ================================= */
+/* MAIN CONTAINER */
+/* ================================= */
+
+.notes-container{
+
+    width:100%;
+    max-width:850px;
+
+    background:var(--glass-bg);
+    border:1px solid var(--border-color);
+
+    border-radius:20px;
+    padding:35px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,0.25);
+
+    backdrop-filter:blur(10px);
+
+    transition:0.25s ease;
+
+}
+
+.notes-container:hover{
+    transform:translateY(-3px);
+}
+
+
+/* ================================= */
+/* HEADER */
+/* ================================= */
+
+.notes-header{
+    text-align:center;
+    margin-bottom:25px;
+    position:relative;
+}
+
+.notes-header h3{
+    font-size:26px;
+    font-weight:600;
+
+}
+
+.notes-header p{
+    font-size:14px;
+    margin-top:5px;
+    opacity:0.7;
+
+}
+
+
+/* ================================= */
+/* NEW CHAT BUTTON */
+/* ================================= */
+
+.new-notes-btn{
+
+    position:absolute;
+    right:0;
+    top:0;
+
+    border:none;
+    padding:7px 14px;
+
+    font-size:13px;
+
+    background:linear-gradient(135deg,#6366f1,#4f46e5);
+
+    color:white;
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:0.25s;
+
+}
+
+.new-notes-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 6px 16px rgba(99,102,241,0.35);
+
+}
+
+
+/* ================================= */
+/* RESPONSE AREA */
+/* ================================= */
+
+.notes-response{
+
+    margin-top:20px;
+    
+}
+
+
+/* ================================= */
+/* USER MESSAGE */
+/* ================================= */
+
+.user-msg{
+    text-align:right;
+    margin-top:20px;
+}
+
+.user-msg p{
+
+    background:#6366f1;
+    color:white;
+
+    padding:12px 16px;
+
+    border-radius:14px;
+
+    display:inline-block;
+
+    max-width:75%;
+
+    font-size:14px;
+
+    box-shadow:0 6px 14px rgba(0,0,0,0.15);
+
+}
+
+
+/* ================================= */
+/* AI MESSAGE */
+/* ================================= */
+
+.ai-msg{
+
+    margin-top:18px;
+
+}
+
+.ai-msg p{
+
+    background:rgba(255,255,255,0.12);
+
+    padding:14px 18px;
+
+    border-radius:14px;
+
+    max-width:100%;
+
+    line-height:1.7;
+
+    font-size:14px;
+
+    border:1px solid var(--border-color);
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+
+}
+
+
+/* ================================= */
+/* ACTION BUTTONS */
+/* ================================= */
+
+.notes-actions{
+
+    margin-top:10px;
+
+    display:flex;
+    gap:10px;
+
+}
+
+.notes-actions button{
+
+    border:none;
+
+    padding:6px 12px;
+
+    border-radius:6px;
+
+    font-size:12px;
+
+    cursor:pointer;
+
+    transition:0.25s;
+
+}
+
+/* Copy */
+
+.notes-actions button:first-child{
+
+    background:#6366f1;
+    color:white;
+
+}
+
+.notes-actions button:first-child:hover{
+
+    background:#4f46e5;
+
+}
+
+/* PDF */
+
+.notes-actions button:last-child{
+
+    background:#22c55e;
+    color:white;
+
+}
+
+.notes-actions button:last-child:hover{
+
+    background:#16a34a;
+
+}
+
+
+/* ================================= */
+/* LOADING TEXT */
+/* ================================= */
+
+.notes-thinking{
+
+    margin-top:15px;
+
+    font-size:14px;
+
+    opacity:0.7;
+
+}
+
+
+/* ================================= */
+/* INPUT AREA */
+/* ================================= */
+
+.notes-input{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:25px;
+
+}
+
+.notes-input input{
+
+    flex:1;
+
+    padding:12px 14px;
+
+    border-radius:10px;
+
+    border:1px solid var(--border-color);
+
+    outline:none;
+
+    background:rgba(255,255,255,0.12);
+
+    color:var(--text-color);
+
+    transition:0.2s;
+
+}
+
+.notes-input input::placeholder{
+    opacity:0.6;
+}
+
+.notes-input input:focus{
+
+    border:1px solid #6366f1;
+
+    box-shadow:0 0 0 2px rgba(99,102,241,0.25);
+
+}
+
+
+/* GENERATE BUTTON */
+
+.notes-input button{
+
+    padding:12px 22px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:linear-gradient(135deg,#6366f1,#4f46e5);
+
+    color:white;
+
+    font-weight:500;
+
+    cursor:pointer;
+
+    transition:0.25s;
+
+}
+
+.notes-input button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 18px rgba(99,102,241,0.35);
+
+}
+
+
+/* ================================= */
+/* RESPONSIVE */
+/* ================================= */
+
+@media(max-width:700px){
+
+    .notes-container{
+        padding:22px;
+    }
+
+    .notes-header h3{
+        font-size:22px;
+    }
+
+    .notes-input{
+        flex-direction:column;
+    }
+
+    .notes-input button{
+        width:100%;
+    }
+
+}

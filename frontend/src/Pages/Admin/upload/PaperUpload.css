@@ -1,0 +1,112 @@
+/* =============================== */
+/* 📌 PAPER FORM CARD */
+/* =============================== */
+
+.paper-form-card {
+  border-radius: 18px;
+  padding: 35px;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title */
+.paper-form-title {
+  font-weight: 800;
+  font-size: 26px;
+  margin-bottom: 25px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* Inputs */
+.paper-input {
+  width: 100%;
+  border-radius: 14px;
+  padding: 14px 18px;
+  font-size: 15px;
+  transition: all 0.3s;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.paper-input:focus {
+  outline: none;
+  box-shadow: 0 0 12px rgba(59,130,246,0.35);
+  border-color: #3b82f6;
+}
+
+/* Submit Button */
+.paper-submit-btn {
+  padding: 14px;
+  font-weight: 700;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.paper-submit-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* =============================== */
+/* 🌙 DARK MODE */
+/* =============================== */
+
+body[data-theme="dark"] .paper-form-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.6);
+}
+
+body[data-theme="dark"] .paper-form-title {
+  color: #3b82f6;
+}
+
+body[data-theme="dark"] .paper-input {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+body[data-theme="dark"] .paper-input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+body[data-theme="dark"] .paper-submit-btn {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+}
+
+/* =============================== */
+/* ☀ LIGHT MODE */
+/* =============================== */
+
+body[data-theme="light"] .paper-form-card {
+  background: #ffffff;
+  border: 2px solid #a09e9e;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+  color: #111;
+}
+
+body[data-theme="light"] .paper-form-title {
+  color: #1e40af;
+}
+
+body[data-theme="light"] .paper-input {
+  background: #f8f9fa;
+  color: #111;
+  border: 2px solid #ddd;
+}
+
+body[data-theme="light"] .paper-input::placeholder {
+  color: #555;
+  opacity: 0.6;
+}
+
+body[data-theme="light"] .paper-submit-btn {
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  color: white;
+}
