@@ -3,6 +3,7 @@ import axios from "axios";
 import NotesInput from "./NotesInput";
 import NotesResponse from "./NotesResponse";
 import "./notes.css";
+import api from "../../api";
 
 function AINotes() {
 
@@ -48,8 +49,12 @@ function AINotes() {
 
     try {
 
-      const res = await axios.post(
-        "http://localhost:5000/api/ai/generate-notes",
+      // const res = await axios.post(
+      //   "http://localhost:5000/api/ai/generate-notes",
+      //   { topic: userTopic }
+      // );
+      const res = await api.post(
+        "/ai/generate-notes",
         { topic: userTopic }
       );
 

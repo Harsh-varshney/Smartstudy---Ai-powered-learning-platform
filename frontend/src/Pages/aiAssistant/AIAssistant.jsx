@@ -3,6 +3,7 @@ import axios from "axios";
 import AIInput from "./AIInput";
 import AIResponse from "./AIResponse";
 import "./ai.css";
+import api from "../../api";
 
 function AIAssistant() {
 
@@ -47,8 +48,12 @@ function AIAssistant() {
 
       setLoading(true);
 
-      const res = await axios.post(
-        "http://localhost:5000/api/ai/ask",
+      // const res = await axios.post(
+      //   "http://localhost:5000/api/ai/ask",
+      //   { question }
+      // );
+      const res = await api.post(
+        "/ai/ask",
         { question }
       );
 

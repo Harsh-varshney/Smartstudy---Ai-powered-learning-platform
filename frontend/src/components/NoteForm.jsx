@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useToast } from "../context/ToastContext";
 import "./NoteForm.css";
+import api from "../api";
 
 function NoteForm({ fetchNotes }) {
   const [subject, setSubject] = useState("");
@@ -14,7 +15,8 @@ function NoteForm({ fetchNotes }) {
     const token = localStorage.getItem("token");
 
     try {
-      await axios.post("http://localhost:5000/api/notes",{subject, content},
+      // await axios.post("http://localhost:5000/api/notes",{subject, content},
+      await api.post("/notes",{subject, content},
         {
           headers: {
             Authorization: `Bearer ${token}`,

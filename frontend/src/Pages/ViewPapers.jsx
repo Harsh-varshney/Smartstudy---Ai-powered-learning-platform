@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useToast } from "../context/ToastContext";
 import "./ViewPapers.css";
+import api from "../api";
 
 function ViewPapers() {
   const [papers, setPapers] = useState([]);
@@ -22,7 +23,8 @@ function ViewPapers() {
           return;
         }
 
-        const res = await axios.get("http://localhost:5000/api/papers", {
+        // const res = await axios.get("http://localhost:5000/api/papers", {
+        const res = await api.get("/papers", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setPapers(res.data);
@@ -42,7 +44,8 @@ function ViewPapers() {
 
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/api/papers/${id}`, {
+      // await axios.delete(`http://localhost:5000/api/papers/${id}`, {
+      await api.delete(`/papers/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setPapers(papers.filter((p) => p._id !== id));
@@ -70,7 +73,8 @@ function ViewPapers() {
 
               <div className="button-group">
                 <a
-                  href={`http://localhost:5000/${paper.fileUrl}`}
+                  // href={`http://localhost:5000/${paper.fileUrl}`}
+                  href={`https://smartstudy-ai-powered-learning-platform.onrender.com/${paper.fileUrl}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="project-btn view-btn"

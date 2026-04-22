@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useToast } from "../context/ToastContext";
 import "./NoteList.css";
+import api from "../api";
 
 function NoteList({ notes, handleDelete, fetchNotes, togglePin }) {
   const [editId, setEditId] = useState(null);
@@ -15,8 +16,8 @@ function NoteList({ notes, handleDelete, fetchNotes, togglePin }) {
     try {
       const token = localStorage.getItem("token");
 
-      await axios.put(
-        `http://localhost:5000/api/notes/${noteId}`,
+      // await axios.put(`http://localhost:5000/api/notes/${noteId}`,
+        await api.put(`/notes/${noteId}`,
         {
           subject: editSubject,
           content: editContent,

@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useToast } from "../../../context/ToastContext";
 import "./PaperUpload.css";
+import api from "../../../api";
 
 function PaperUpload() {
   const [title, setTitle] = useState("");
@@ -29,9 +30,8 @@ function PaperUpload() {
 
       const token = localStorage.getItem("token");
 
-      const res = await axios.post(
-        "http://localhost:5000/api/papers/upload",
-        formData,
+      // const res = await axios.post("http://localhost:5000/api/papers/upload",
+      const res = await api.post("/papers/upload",formData,
         {
           headers: {
             Authorization: `Bearer ${token}`,

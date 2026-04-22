@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import api from "../../api";
 
 function QuizStart({ setQuiz }) {
 
@@ -15,8 +16,12 @@ function QuizStart({ setQuiz }) {
     try {
       setLoading(true);
 
-      const res = await axios.post(
-        "http://localhost:5000/api/quiz/topic",
+      // const res = await axios.post(
+      //   "http://localhost:5000/api/quiz/topic",
+      //   { topic }
+      // );
+      const res = await api.post(
+        "/quiz/topic",
         { topic }
       );
 
@@ -34,8 +39,13 @@ function QuizStart({ setQuiz }) {
     try {
       setLoading(true);
 
-      const res = await axios.post(
-        "http://localhost:5000/api/quiz/question",
+      // const res = await axios.post(
+      //   "http://localhost:5000/api/quiz/question",
+      //   { question }
+      // );
+
+      const res = await api.post(
+        "/quiz/question",
         { question }
       );
 
@@ -56,8 +66,13 @@ function QuizStart({ setQuiz }) {
       const formData = new FormData();
       formData.append("pdf", pdf);
 
-      const res = await axios.post(
-        "http://localhost:5000/api/quiz/pdf",
+      // const res = await axios.post(
+      //   "http://localhost:5000/api/quiz/pdf",
+      //   formData
+      // );
+
+      const res = await api.post(
+        "/quiz/pdf",
         formData
       );
 
