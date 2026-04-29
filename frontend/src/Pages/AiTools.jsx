@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const AITools = () => {
+const AiTools = () => {
   return (
     <div className="container mt-5">
 
@@ -75,4 +75,4 @@ const AITools = () => {
   );
 };
 
-export default AITools;
+export default AiTools;
