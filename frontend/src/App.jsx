@@ -24,7 +24,7 @@ import AIAssistant from "./Pages/aiAssistant/AIAssistant";
 import AINotes from "./Pages/aiNotes/AINotes";
 import AIQuiz from "./Pages/Quiz/AIQuiz";
 import PaperAnalysis from "./Pages/paperAnalysis/PaperAnalysis";
-import AITools from "./pages/AiTools";
+import AITools from "./Pages/AiTools";
 
 function App() {
   const [user, setUser] = useState(() => {
