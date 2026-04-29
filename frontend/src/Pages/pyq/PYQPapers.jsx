@@ -29,7 +29,7 @@ const availablePapers = {
 
   "Privacy and security in online social media": years,
   "Blockchain Architecture": ["2022","2023"],
-  "Mobile computing": ["2023"]
+  "Mobile computing": ["2025","2024","2023"]
 };
 
   const subjectFileMap = {
