@@ -76,7 +76,7 @@ function App() {
             <Route path="/ai-notes" element={<AINotes />} />
             <Route path="/ai-quiz" element={<AIQuiz />} />
             <Route path="/paper-analysis" element={<PaperAnalysis />} />
-            <Route path="/ai-tools" element={<AITools />} />
+            <Route path="/ai-tools" element={<AiTools />} />
           </Routes>
         </div>
 
